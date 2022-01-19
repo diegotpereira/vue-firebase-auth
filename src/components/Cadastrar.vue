@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-template">
+  <div class="vue-tempalte">
     <form @submit.prevent="registrarUsuario">
       <h3>Cadastrar</h3>
 
@@ -49,9 +49,9 @@ export default {
       .auth()
       .createUserWithEmailAndPassword(this.usuario.email, this.usuario.password)
       .then((res) => {
-        res.user
+        res.usuario
         .updateProfile({
-          displayName: this.usuario.nome 
+          displayNome: this.usuario.nome 
         })
         .then(() => {
           this.$router.push('/entrar')
